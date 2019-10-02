@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { getSmurfs } from "../actions/Actions";
 import { connect } from "react-redux";
-import { SmurfReducer } from "../reducers"
+import { SmurfCard } from "./SmurfCard"
+import { Card, Image } from "semantic-ui-react";
 
 function SmurfList({ getSmurfs, smurfs, error }) {
     useEffect(() => {
@@ -14,14 +15,18 @@ function SmurfList({ getSmurfs, smurfs, error }) {
     return (
         <div>
             <h3>Smurf List</h3>
+
             {smurfs.map(smurf => {
                 console.log(smurfs)
                 return (
-                    <div key={smurf.id}>
-                        <p>Name: {smurf.name}</p>
-                        <p>Age: {smurf.age}</p>
-                        <p>Height: {smurf.height}</p>
-                    </div>
+                    <Card>
+                        <Image src="../smurfPicture/smurf-sprint-picture.jpg"></Image>
+                        <div key={smurf.id}>
+                            <p>Name: {smurf.name}</p>
+                            <p>Age: {smurf.age}</p>
+                            <p>Height: {smurf.height}</p>
+                        </div>
+                    </Card>
                 );
             })}
         </div>
