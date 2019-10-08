@@ -3,6 +3,7 @@ import { getSmurfs } from "../actions/Actions";
 import { connect } from "react-redux";
 import { SmurfCard } from "./SmurfCard"
 import { Card, Image } from "semantic-ui-react";
+import smurfpic from "../smurfPicture/smurfpic.jpg";
 
 function SmurfList({ getSmurfs, smurfs, error }) {
     useEffect(() => {
@@ -20,7 +21,7 @@ function SmurfList({ getSmurfs, smurfs, error }) {
                 console.log(smurfs)
                 return (
                     <Card>
-                        <Image src="../smurfPicture/smurf-sprint-picture.jpg"></Image>
+                        <Image src={smurfpic}></Image>
                         <div key={smurf.id}>
                             <p>Name: {smurf.name}</p>
                             <p>Age: {smurf.age}</p>
