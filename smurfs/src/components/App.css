@@ -22,7 +22,27 @@
   font-size: large;
 }
 
+.ui.card {
+  border: 2px solid gold;
+  width: 9em;
+  margin: 35px auto;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.ui.image {
+  /* border: 2px solid black; */
+  width: 7em;
+  background: #fff;
+  padding: 15px;
+}
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
